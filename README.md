@@ -1,101 +1,176 @@
 <div align="center">
 
-  <h1> CALIBUR : DATA SIDE </h1>
-  
-  <p>
-    <strong>The Neural Backbone & Training Grounds for the Calibur Detection System</strong>
-  </p>
+# CALIBUR — DATA SIDE
 
-  <p>
-    <a href="https://www.python.org/">
-      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-    </a>
-    <a href="https://pytorch.org/">
-      <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
-    </a>
-    <a href="#">
-      <img src="https://img.shields.io/badge/Data-Augmented-blueviolet?style=for-the-badge" alt="Data" />
-    </a>
-    <a href="#">
-      <img src="https://img.shields.io/badge/Research-Thesis-FFD11B?style=for-the-badge" alt="Thesis" />
-    </a>
-  </p>
+### **The Neural Backbone & Training Grounds of the Calibur Detection System**
 
-  <p>
-    <i>"Data is the fuel. Code is the engine. Intelligence is the destination."</i>
-  </p>
+> *Data is the fuel. Code is the engine. Intelligence is the destination.*
 
-  <br />
-<hr />
+---
 
-## 📡 Mission Brief
+<p>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  </a>
+  <a href="https://pytorch.org/">
+    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+  </a>
+  <img src="https://img.shields.io/badge/Data-Augmented-blueviolet?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Research-Thesis-FFD11B?style=for-the-badge" />
+</p>
 
-This repository serves as the **classified archive** for the deep learning models powering the Calibur project. It houses the raw intelligence (datasets) and the instruction sets (training algorithms) required to forge the object detection system used in the associated thesis research.
+<p align="center">
+  <a href="#mission-brief">Mission</a> •
+  <a href="#the-vault-datasets">Datasets</a> •
+  <a href="#the-architect-training-code">Training</a> •
+  <a href="#initiation-protocol">Execution</a>
+</p>
 
-Here, we store the baseline truths and the experimental variables used to push the boundaries of computer vision.
+</div>
+
+---
+
+## Mission Brief
+
+This repository is the **research core** of the Calibur project.
+
+It contains the datasets, augmentation strategies, and training pipelines used to develop and evaluate the object detection models presented in the associated academic thesis.
+
+This is not a deployment repository.
+This is where **ground truth is forged**, hypotheses are tested, and models earn their performance claims.
+
+The contents are structured to ensure:
+
+* Reproducibility of experiments
+* Clear separation between baseline and experimental data
+* Transparent model training workflows
 
 ---
 
 ## The Vault (Datasets)
 
-We do not simply store files; we curate intelligence. The repository is divided into specific sectors:
+Data is treated as intelligence — curated, versioned, and purpose-driven.
 
-### 1. The Prime Directive (Main Dataset)
-> **Filename:** `Skripsi_Aug_384_from1080_alt4.rar`
+### 1. Prime Directive (Main Dataset)
 
-This is the **Gold Standard**.
-* **Status:** Production Ready.
-* **Intel:** Contains the primary dataset used to train the Master Model.
-* **Processing:** Subjected to rigorous pre-processing and comprehensive data augmentation pipelines to ensure maximum generalization in the field.
+**Filename:**
 
-### 2. The Experimental Variant (Frontal)
-> **Filename:** `Skripsi_SplitThenAug_384_Threads_frontal_v5.rar`
+```
+Skripsi_Aug_384_from1080_alt4.rar
+```
 
-The **Challenger**.
-* **Status:** Experimental / Hypothesis Testing.
-* **Intel:** A specialized subset focused on restricted viewing angles (Frontal-View).
-* **Objective:** Isolated and processed to test specific hypotheses regarding model performance under unidirectional imaging conditions. Used as the control variable against the Master Model.
+**Role:** Primary training dataset
+
+**Status:** Production-grade (research baseline)
+
+**Description:**
+
+* Serves as the **gold standard dataset** for the thesis
+* Derived from high-resolution source imagery
+* Processed through a full augmentation pipeline
+* Designed to maximize generalization across varied conditions
+
+This dataset is used to train the **Master Model**, against which all experimental variants are compared.
+
+---
+
+### 2. Experimental Variant (Frontal)
+
+**Filename:**
+
+```
+Skripsi_SplitThenAug_384_Threads_frontal_v5.rar
+```
+
+**Role:** Controlled experimental dataset
+
+**Status:** Experimental / hypothesis testing
+
+**Description:**
+
+* Focused exclusively on frontal-view imagery
+* Isolated prior to augmentation to preserve directional bias
+* Used to evaluate performance under constrained viewing conditions
+
+This dataset functions as a **controlled variable**, enabling direct comparison against the Master Model trained on the Prime Directive dataset.
 
 ---
 
 ## The Architect (Training Code)
 
-> **Directory:** `training_code.py` / `training_code/`
+**Location:**
 
-This is where the magic happens. This directory contains the **Life Cycle Algorithms** for the AI model:
+```
+training_code.py
+# or
+training_code/
+```
 
-* **Data Ingestion:** Scripts to load and normalize raw inputs.
-* **Neural Architecture:** The blueprint of the model itself.
-* **Training Loop:** The gym where the model learns (Forward pass, Backward pass, Validation).
-* **Hyperparameters:** The tuning knobs for reproducibility.
+This module defines the **full training lifecycle** of the detection model.
 
----
+### Responsibilities
 
-## 🚀 Initiation Protocol
+* Dataset loading and normalization
+* Model architecture definition
+* Training and validation loops
+* Loss computation and optimization
+* Hyperparameter configuration for reproducibility
 
-To deploy this intelligence locally, follow the standard operating procedure:
-
-### Step 1: Extract Intelligence
-Download the `.rar` artifact corresponding to your mission objective (Main vs. Experimental) and extract it to your local sector.
-
-### Step 2: Equip Dependecies
-Ensure your environment is primed. Install all Python libraries listed within the training code imports.
-
-### Step 3: Commence Training
-Execute the protocol:
-1.  Open `training_code`.
-2.  Point the `data_dir` variable to your extracted dataset.
-3.  Run the script to begin the neural optimization process.
+The code is intentionally explicit rather than abstracted, prioritizing **clarity and traceability** over framework-level automation.
 
 ---
 
-## ⚠️ Classified Advisory
+## Initiation Protocol
 
-**Authorized Personnel Only.**
-All data and algorithms contained herein are strictly for **academic research** and the development of the thesis object detection system. Deployment outside of this context may require recalibration of the training parameters.
+Follow this procedure to reproduce experiments locally.
+
+### Step 1 — Extract Dataset
+
+Select the dataset aligned with your objective:
+
+* Prime Directive → baseline replication
+* Experimental Variant → hypothesis testing
+
+Extract the `.rar` file into a local directory.
+
+---
+
+### Step 2 — Prepare Environment
+
+Ensure a compatible Python environment is available.
+
+Install required dependencies as indicated by the training script imports (e.g., PyTorch, NumPy, OpenCV, etc.).
+
+Virtual environments are strongly recommended.
+
+---
+
+### Step 3 — Commence Training
+
+1. Open the training script or directory
+2. Update the `data_dir` variable to point to the extracted dataset
+3. Execute the training process
+
+The model will begin iterative optimization according to the defined configuration.
+
+---
+
+## Advisory Notice
+
+**Academic Use Only**
+
+All datasets and training logic contained in this repository are intended solely for:
+
+* Academic research
+* Thesis experimentation
+* Reproducible evaluation
+
+Any use outside this scope may require architectural changes, dataset rebalancing, or retraining.
 
 ---
 
 <div align="center">
-  <p>Forged for Science. Optimized for Vision.</p>
+
+*Forged for research. Optimized for vision.*
+
 </div>
