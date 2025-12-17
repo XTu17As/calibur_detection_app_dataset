@@ -26,15 +26,6 @@
   </p>
 
   <br />
-
-  <p align="center">
-    <a href="#-the-vault">The Vault</a> •
-    <a href="#-the-architect">The Code</a> •
-    <a href="#-initiation-protocol">Initiation</a> •
-    <a href="#-mission-brief">Advisory</a>
-  </p>
-</div>
-
 <hr />
 
 ## 📡 Mission Brief
