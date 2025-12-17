@@ -16,8 +16,7 @@ Berkas-berkas dalam repositori ini dikategorikan berdasarkan fungsinya dalam pen
 * **Deskripsi**:
     Arsip ini berisi variasi dataset yang dikhususkan untuk eksperimen model dengan sudut pandang terbatas (frontal). Dataset ini dipisahkan dan diproses secara spesifik untuk menguji hipotesis kinerja model pada kondisi pengambilan gambar satu arah dan digunakan sebagai pembanding terhadap model utama.
 
-### 3. Kode Pelatihan (*Training Code*)
-* **Folder/Berkas**: `training_code`
+### 3. Kode Pelatihan (*training_code.py*)
 * **Deskripsi**:
     Direktori ini memuat seluruh kode algoritma yang diperlukan untuk siklus hidup pengembangan model. Cakupan kode meliputi:
     * Skrip untuk memuat dan memproses data (*data loading & preprocessing*).
@@ -34,6 +33,3 @@ Berkas-berkas dalam repositori ini dikategorikan berdasarkan fungsinya dalam pen
 ## 📝 Catatan Tambahan
 
 Seluruh data yang tersedia dalam repositori ini ditujukan semata-mata untuk kepentingan penelitian dan pengembangan sistem deteksi terkait skripsi ini. Penggunaan di luar konteks tersebut memerlukan penyesuaian pada parameter kode pelatihan.
-
----
-*Dokumentasi ini dibuat sebagai bagian dari kelengkapan artefak Skripsi.*
