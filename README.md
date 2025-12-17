@@ -1,35 +1,110 @@
-# Calibur Detection App Dataset dan Kode Training
+<div align="center">
 
-Repositori ini berfungsi sebagai arsip penyimpanan data dan kode sumber yang digunakan dalam pengembangan model deteksi objek untuk penelitian skripsi. Repositori ini mencakup dataset utama, dataset eksperimental untuk pengujian variasi sudut pandang, serta algoritma pelatihan model.
+  <h1> CALIBUR : DATA SIDE </h1>
+  
+  <p>
+    <strong>The Neural Backbone & Training Grounds for the Calibur Detection System</strong>
+  </p>
 
-## 🗂️ Struktur dan Deskripsi File
-### Lihat file .txt
-Berkas-berkas dalam repositori ini dikategorikan berdasarkan fungsinya dalam pengembangan model:
+  <p>
+    <a href="https://www.python.org/">
+      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+    </a>
+    <a href="https://pytorch.org/">
+      <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
+    </a>
+    <a href="#">
+      <img src="https://img.shields.io/badge/Data-Augmented-blueviolet?style=for-the-badge" alt="Data" />
+    </a>
+    <a href="#">
+      <img src="https://img.shields.io/badge/Research-Thesis-FFD11B?style=for-the-badge" alt="Thesis" />
+    </a>
+  </p>
 
-### 1. Dataset Utama
-* **Nama Berkas**: `Skripsi_Aug_384_from1080_alt4.rar`
-* **Deskripsi**:
-    Arsip ini berisi kumpulan data primer yang digunakan untuk melatih model deteksi utama. Data di dalamnya telah melalui proses pra-pemrosesan dan augmentasi data yang komprehensif untuk memastikan generalisasi model yang optimal pada lingkungan produksi. Dataset ini merupakan acuan standar (baseline) dalam penelitian ini.
+  <p>
+    <i>"Data is the fuel. Code is the engine. Intelligence is the destination."</i>
+  </p>
 
-### 2. Dataset Eksperimental (Frontal)
-* **Nama Berkas**: `Skripsi_SplitThenAug_384_Threads_frontal_v5.rar`
-* **Deskripsi**:
-    Arsip ini berisi variasi dataset yang dikhususkan untuk eksperimen model dengan sudut pandang terbatas (frontal). Dataset ini dipisahkan dan diproses secara spesifik untuk menguji hipotesis kinerja model pada kondisi pengambilan gambar satu arah dan digunakan sebagai pembanding terhadap model utama.
+  <br />
 
-### 3. Kode Pelatihan (*training_code.py*)
-* **Deskripsi**:
-    Direktori ini memuat seluruh kode algoritma yang diperlukan untuk siklus hidup pengembangan model. Cakupan kode meliputi:
-    * Skrip untuk memuat dan memproses data (*data loading & preprocessing*).
-    * Definisi arsitektur model.
-    * Algoritma pelatihan (*training loop*) dan validasi.
-    * Konfigurasi parameter untuk reproduktabilitas hasil eksperimen.
+  <p align="center">
+    <a href="#-the-vault">The Vault</a> •
+    <a href="#-the-architect">The Code</a> •
+    <a href="#-initiation-protocol">Initiation</a> •
+    <a href="#-mission-brief">Advisory</a>
+  </p>
+</div>
 
-## 💻 Cara Penggunaan
+<hr />
 
-1.  **Ekstraksi Data**: Unduh dan ekstrak berkas `.rar` sesuai dengan model yang ingin dikembangkan atau diuji (Utama atau Eksperimental).
-2.  **Persiapan Lingkungan**: Pastikan seluruh dependensi *library* yang tertera pada kode pelatihan telah terinstal.
-3.  **Pelatihan Model**: Gunakan skrip di dalam `training_code` dan arahkan direktori data ke hasil ekstraksi dataset yang telah diunduh.
+## 📡 Mission Brief
 
-## 📝 Catatan Tambahan
+This repository serves as the **classified archive** for the deep learning models powering the Calibur project. It houses the raw intelligence (datasets) and the instruction sets (training algorithms) required to forge the object detection system used in the associated thesis research.
 
-Seluruh data yang tersedia dalam repositori ini ditujukan semata-mata untuk kepentingan penelitian dan pengembangan sistem deteksi terkait skripsi ini. Penggunaan di luar konteks tersebut memerlukan penyesuaian pada parameter kode pelatihan.
+Here, we store the baseline truths and the experimental variables used to push the boundaries of computer vision.
+
+---
+
+## The Vault (Datasets)
+
+We do not simply store files; we curate intelligence. The repository is divided into specific sectors:
+
+### 1. The Prime Directive (Main Dataset)
+> **Filename:** `Skripsi_Aug_384_from1080_alt4.rar`
+
+This is the **Gold Standard**.
+* **Status:** Production Ready.
+* **Intel:** Contains the primary dataset used to train the Master Model.
+* **Processing:** Subjected to rigorous pre-processing and comprehensive data augmentation pipelines to ensure maximum generalization in the field.
+
+### 2. The Experimental Variant (Frontal)
+> **Filename:** `Skripsi_SplitThenAug_384_Threads_frontal_v5.rar`
+
+The **Challenger**.
+* **Status:** Experimental / Hypothesis Testing.
+* **Intel:** A specialized subset focused on restricted viewing angles (Frontal-View).
+* **Objective:** Isolated and processed to test specific hypotheses regarding model performance under unidirectional imaging conditions. Used as the control variable against the Master Model.
+
+---
+
+## The Architect (Training Code)
+
+> **Directory:** `training_code.py` / `training_code/`
+
+This is where the magic happens. This directory contains the **Life Cycle Algorithms** for the AI model:
+
+* **Data Ingestion:** Scripts to load and normalize raw inputs.
+* **Neural Architecture:** The blueprint of the model itself.
+* **Training Loop:** The gym where the model learns (Forward pass, Backward pass, Validation).
+* **Hyperparameters:** The tuning knobs for reproducibility.
+
+---
+
+## 🚀 Initiation Protocol
+
+To deploy this intelligence locally, follow the standard operating procedure:
+
+### Step 1: Extract Intelligence
+Download the `.rar` artifact corresponding to your mission objective (Main vs. Experimental) and extract it to your local sector.
+
+### Step 2: Equip Dependecies
+Ensure your environment is primed. Install all Python libraries listed within the training code imports.
+
+### Step 3: Commence Training
+Execute the protocol:
+1.  Open `training_code`.
+2.  Point the `data_dir` variable to your extracted dataset.
+3.  Run the script to begin the neural optimization process.
+
+---
+
+## ⚠️ Classified Advisory
+
+**Authorized Personnel Only.**
+All data and algorithms contained herein are strictly for **academic research** and the development of the thesis object detection system. Deployment outside of this context may require recalibration of the training parameters.
+
+---
+
+<div align="center">
+  <p>Forged for Science. Optimized for Vision.</p>
+</div>
