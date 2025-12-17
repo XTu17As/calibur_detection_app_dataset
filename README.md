@@ -19,12 +19,6 @@
   <img src="https://img.shields.io/badge/Research-Thesis-FFD11B?style=for-the-badge" />
 </p>
 
-<p align="center">
-  <a href="#mission-brief">Mission</a> •
-  <a href="#the-vault-datasets">Datasets</a> •
-  <a href="#the-architect-training-code">Training</a> •
-  <a href="#initiation-protocol">Execution</a>
-</p>
 
 </div>
 
