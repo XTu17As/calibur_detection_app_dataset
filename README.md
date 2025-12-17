@@ -1,6 +1,6 @@
 <div align="center">
 
-# CALIBUR — DATA SIDE
+# C A L I B U R - DATA SIDE
 
 ### **The Neural Backbone & Training Grounds of the Calibur Detection System**
 
