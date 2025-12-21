@@ -25,7 +25,7 @@ from pycocotools.cocoeval import COCOeval
 # KAGGLE/NOTEBOOK
 from IPython.display import FileLink, display
 
-# ---------------- CONFIG ----------------
+# CONFIG 
 # KAGGLE PATHS
 KAGGLE_INPUT_DIR = "/kaggle/input/skripsi-splitthenaug-384-threads-frontal-v5-merged/Skripsi_SplitThenAug_384_Threads_frontal_v5_merged"
 ANNOTATION_JSON = os.path.join(KAGGLE_INPUT_DIR, "annotations_all.json")
@@ -52,7 +52,7 @@ NMS_IOU_THRESH = 0.5
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 random.seed(SEED); np.random.seed(SEED); torch.manual_seed(SEED)
 
-# ---------------- Dataset (COCO style) ----------------
+# Dataset (COCO style) 
 class CocoDataset(Dataset):
     def __init__(self, ann_file, img_dir, img_ids, img_size=IMAGE_SIZE, is_train=True):
         self.coco = COCO(ann_file)
@@ -112,7 +112,7 @@ def collate_fn(batch):
     targets = [b[1] for b in batch]
     return imgs, targets
 
-# ---------------- TinyViT-5M Backbone (Official Spec) ----------------
+# TinyViT-5M Backbone (Official Spec) 
 class SqueezeExcite(nn.Module):
     def __init__(self, in_channels, rd_ratio=0.25):
         super().__init__()
@@ -384,7 +384,7 @@ class TinyViT5MBackbone(nn.Module):
         c3, c4, c5 = outs[0], outs[1], outs[2]
         return [c3, c4, c5]
 
-# ---------------- FPN + FCOS Head ----------------
+# FPN + FCOS Head 
 class FPN(nn.Module):
     def __init__(self, in_channels, out_channels=128):
         super().__init__()
@@ -461,7 +461,7 @@ class TinyViT_FPN_FCOS(nn.Module):
         cls, reg, cen = self.head(fpn_feats)
         return cls, reg, cen, fpn_feats
 
-# ---------------- Helpers / losses / IoU ----------------
+# Helpers / losses / IoU 
 def compute_locations(feature, stride, device=None):
     if isinstance(feature, torch.Tensor):
         _,_,h,w = feature.shape
@@ -512,7 +512,7 @@ def mean_iou_for_image(pred_boxes, gt_boxes):
     best_per_gt, _ = ious.max(0)
     return float(best_per_gt.mean().item())
 
-# ---------------- Data loaders (STRATIFIED SPLIT) ----------------
+# Data loaders (STRATIFIED SPLIT) 
 def prepare_loaders(ann_file, img_dir, split=TRAIN_VAL_SPLIT):
     coco = COCO(ann_file)
     
@@ -567,7 +567,7 @@ def prepare_loaders(ann_file, img_dir, split=TRAIN_VAL_SPLIT):
     idx2cat = {i: cid for i, cid in enumerate(cat_ids)}
     return train_loader, val_loader, coco, idx2cat
 
-# ---------------- Evaluation (Using Hard NMS) ----------------
+# Evaluation (Using Hard NMS)
 def evaluate(model, val_loader, coco_gt, device, idx2cat):
     model.eval()
     results = []
@@ -667,7 +667,7 @@ def evaluate(model, val_loader, coco_gt, device, idx2cat):
 
     return coco_eval.stats, recall_metrics, float(np.mean(mean_ious) if len(mean_ious)>0 else 0.0)
 
-# ---------------- TRAIN ----------------
+# TRAIN 
 def train():
     device = torch.device(DEVICE)
     coco_temp = COCO(ANNOTATION_JSON)
@@ -814,7 +814,7 @@ def train():
             epoch_log['mAP_0.5:0.95'] = map05095
             epoch_log['mAP_0.5'] = map05
             
-            # 🔧 FIX: Update epoch_log with recall metrics
+            # Update epoch_log with recall metrics
             epoch_log.update(recall_metrics)
 
             if map05095 > best_map:
